@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="eRtl">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="SetupInfReq">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SetHd">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="SpRefNum" type="xs:string" />
+                    <xs:element name="SetupReqId" type="xs:string" />
+                    <xs:element name="SpSysId" type="xs:string" />
+                    <xs:element name="SetupTyp" type="xs:string" />
+                    <xs:element name="SetClBckUrl" type="xs:string" />
+                    <xs:element name="DevId" type="xs:string" />
+                    <xs:element name="SetupRespFlag" type="xs:boolean" />
+                    <xs:element name="Vrs" type="xs:decimal" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="SetupDtl">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="VerCode" type="xs:string" />
+                    <xs:element name="DevId" type="xs:string" />
+                    <xs:element name="UsrNm" type="xs:string" />
+                    <xs:element name="VerCodeExpDt" type="xs:dateTime" />
+                    <xs:element name="GenBy" type="xs:string" />
+                    <xs:element name="GenDt" type="xs:dateTime" />
+                    <xs:element name="ApvdBy" type="xs:string" />
+                    <xs:element name="ApvdDt" type="xs:dateTime" />
+                    <xs:element name="StsCode" type="xs:unsignedShort" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="eRtlSignature" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

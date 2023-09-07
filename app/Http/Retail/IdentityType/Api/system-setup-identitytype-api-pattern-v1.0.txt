@@ -1,0 +1,109 @@
+
+URL--http://localhost/maokoto-retail-service-6/api/identity-type
+METHOD-- POST
+===============JSON Request  ====================
+{
+    "IdTypCode": "1",
+    "IdTypNm": "TIN"
+}
+
+===============XML Request  ====================
+
+
+
+===============JSON Request Ack====================
+
+{
+    "SetupInfReqAck": {
+        "SetupAckId": "61CD7AB2AF00160109364212402716925",
+        "SetupReqId": "20211125084649658870619F2349A1BC1",
+        "StsCode": "10007",
+        "StsDesc": "Successful"
+    },
+    "eRtlSignature": "NBOvaH4b+XfX9Tfka+iP7ombCWy/74MvrlyBRMbvWyNpK1CDv7cI/XeVdwZK2vT8mKTz79PAQxiZcETLI9hAhMyLax7iktUhRmlHH0pzEYczp72UcA0AFIv+wtYyntbRNXBlIbKN5GUlGEAYIYgTL80FogvtfYhK2Fk1/1VNtVHUvZ0QIIRctiPnvbS9LO7EtmXmIU6HhfabpcjEHghVl93VDdyn58u3rn/pPBHFsUKjUErUXfZASqtXN4kzMyttfGLJgysnSJjXCWgWlVM+JKsL1vsxyIeAfQuMlvP5QI6p4aJervr2d/JSizk6Bd8Ri3iaVzuPQnxxuf13u/SuYA=="
+}
+
+
+===============XML Request Ack====================
+
+<?xml version="1.0" encoding="UTF-8" ?>
+<eRtl>
+<SetupInfReqAck>
+    <SetupAckId>61CD7AB2AF00160109364212402716925</SetupAckId>
+    <SetupReqId>20211125084649658870619F2349A1BC1</SetupReqId>
+    <StsCode>10007</StsCode>
+    <StsDesc>Successful</StsDesc>
+</SetupInfAck>
+<eRtlSignature>NBOvaH4b+XfX9Tfka+iP7ombCWy/74MvrlyBRMbvWyNpK1CDv7cI/XeVdwZK2vT8mKTz79PAQxiZcETLI9hAhMyLax7iktUhRmlHH0pzEYczp72UcA0AFIv+wtYyntbRNXBlIbKN5GUlGEAYIYgTL80FogvtfYhK2Fk1/1VNtVHUvZ0QIIRctiPnvbS9LO7EtmXmIU6HhfabpcjEHghVl93VDdyn58u3rn/pPBHFsUKjUErUXfZASqtXN4kzMyttfGLJgysnSJjXCWgWlVM+JKsL1vsxyIeAfQuMlvP5QI6p4aJervr2d/JSizk6Bd8Ri3iaVzuPQnxxuf13u/SuYA==</eRtlSignature>
+</eRtl>
+
+
+
+
+===============JSON Response  ====================
+
+{
+    "SetupInfResp": {
+        "SetupRespId": "61CD7AB2AF00160109364212402716925",
+        "SetupReqId": "20211125084649658870619F2349A1BC1",
+        "SetupTyp":"SET002",
+        "Ccy": "TZS",
+        "Vrs": "1.0",
+        "StsCode": "10007",
+        "StsDesc": "Successful"
+    },
+    "eRtlSignature": "NBOvaH4b+XfX9Tfka+iP7ombCWy/74MvrlyBRMbvWyNpK1CDv7cI/XeVdwZK2vT8mKTz79PAQxiZcETLI9hAhMyLax7iktUhRmlHH0pzEYczp72UcA0AFIv+wtYyntbRNXBlIbKN5GUlGEAYIYgTL80FogvtfYhK2Fk1/1VNtVHUvZ0QIIRctiPnvbS9LO7EtmXmIU6HhfabpcjEHghVl93VDdyn58u3rn/pPBHFsUKjUErUXfZASqtXN4kzMyttfGLJgysnSJjXCWgWlVM+JKsL1vsxyIeAfQuMlvP5QI6p4aJervr2d/JSizk6Bd8Ri3iaVzuPQnxxuf13u/SuYA=="
+}
+
+
+===============XML Response  ====================
+
+
+<?xml version="1.0" encoding="UTF-8" ?>
+<eRtl>
+<SetupInfResp>
+    <SetupRespId>61CD7AB2AF00160109364212402716925</SetupRespId>
+    <SetupReqId>20211125084649658870619F2349A1BC1</SetupReqId>
+    <SetupTyp>SET002</SetupTyp>
+    <Ccy>TZS</Ccy>
+    <Vrs>1.0</Vrs>
+    <StsCode>10007</StsCode>
+    <StsDesc>Successful</StsDesc>
+</SetupInfResp>
+<eRtlSignature>NBOvaH4b+XfX9Tfka+iP7ombCWy/74MvrlyBRMbvWyNpK1CDv7cI/XeVdwZK2vT8mKTz79PAQxiZcETLI9hAhMyLax7iktUhRmlHH0pzEYczp72UcA0AFIv+wtYyntbRNXBlIbKN5GUlGEAYIYgTL80FogvtfYhK2Fk1/1VNtVHUvZ0QIIRctiPnvbS9LO7EtmXmIU6HhfabpcjEHghVl93VDdyn58u3rn/pPBHFsUKjUErUXfZASqtXN4kzMyttfGLJgysnSJjXCWgWlVM+JKsL1vsxyIeAfQuMlvP5QI6p4aJervr2d/JSizk6Bd8Ri3iaVzuPQnxxuf13u/SuYA==</eRtlSignature>
+</eRtl>
+
+
+
+
+===============JSON Response Ack ====================
+
+{
+    "SetupInfRespAck": {
+        "StsCode": "10007",
+        "StsDesc": "Successful"
+    },
+    "eRtlSignature": "NBOvaH4b+XfX9Tfka+iP7ombCWy/74MvrlyBRMbvWyNpK1CDv7cI/XeVdwZK2vT8mKTz79PAQxiZcETLI9hAhMyLax7iktUhRmlHH0pzEYczp72UcA0AFIv+wtYyntbRNXBlIbKN5GUlGEAYIYgTL80FogvtfYhK2Fk1/1VNtVHUvZ0QIIRctiPnvbS9LO7EtmXmIU6HhfabpcjEHghVl93VDdyn58u3rn/pPBHFsUKjUErUXfZASqtXN4kzMyttfGLJgysnSJjXCWgWlVM+JKsL1vsxyIeAfQuMlvP5QI6p4aJervr2d/JSizk6Bd8Ri3iaVzuPQnxxuf13u/SuYA=="
+}
+
+===============XML Response Ack ====================
+
+<?xml version="1.0" encoding="UTF-8" ?>
+<eRtl>
+<SetupInfRespAck>
+    <StsCode>10007</StsCode>
+    <StsDesc>Successful</StsDesc>
+</SetupInfRespAck>
+<eRtlSignature>NBOvaH4b+XfX9Tfka+iP7ombCWy/74MvrlyBRMbvWyNpK1CDv7cI/XeVdwZK2vT8mKTz79PAQxiZcETLI9hAhMyLax7iktUhRmlHH0pzEYczp72UcA0AFIv+wtYyntbRNXBlIbKN5GUlGEAYIYgTL80FogvtfYhK2Fk1/1VNtVHUvZ0QIIRctiPnvbS9LO7EtmXmIU6HhfabpcjEHghVl93VDdyn58u3rn/pPBHFsUKjUErUXfZASqtXN4kzMyttfGLJgysnSJjXCWgWlVM+JKsL1vsxyIeAfQuMlvP5QI6p4aJervr2d/JSizk6Bd8Ri3iaVzuPQnxxuf13u/SuYA==</eRtlSignature>
+</eRtl>
+
+
+
+
+
+
+
+
+===================================================List all Currency API===========================
+
+http://localhost/advatech-retail-service/api/currency

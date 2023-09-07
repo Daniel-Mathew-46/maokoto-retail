@@ -1,0 +1,117 @@
+[
+  {
+    "MinSvcAmt": 0,
+    "MaxSvcAmt": 999,
+    "SvcAmt": 40
+  },
+  {
+    "MinSvcAmt": 1000,
+    "MaxSvcAmt": 1999,
+    "SvcAmt": 75
+  },
+  {
+    "MinSvcAmt": 2000,
+    "MaxSvcAmt": 2999,
+    "SvcAmt": 75
+  },
+  {
+    "MinSvcAmt": 3000,
+    "MaxSvcAmt": 3999,
+    "SvcAmt": 125
+  },
+  {
+    "MinSvcAmt": 4000,
+    "MaxSvcAmt": 4999,
+    "SvcAmt": 150
+  },
+  {
+    "MinSvcAmt": 5000,
+    "MaxSvcAmt": 6999,
+    "SvcAmt": 325
+  },
+  {
+    "MinSvcAmt": 7000,
+    "MaxSvcAmt": 9999,
+    "SvcAmt": 375
+  },
+  {
+    "MinSvcAmt": 10000,
+    "MaxSvcAmt": 14999,
+    "SvcAmt": 875
+  },
+  {
+    "MinSvcAmt": 15000,
+    "MaxSvcAmt": 19999,
+    "SvcAmt": 900
+  },
+  {
+    "MinSvcAmt": 20000,
+    "MaxSvcAmt": 29999,
+    "SvcAmt": 950
+  },
+  {
+    "MinSvcAmt": 30000,
+    "MaxSvcAmt": 39999,
+    "SvcAmt": 1000
+  },
+  {
+    "MinSvcAmt": 40000,
+    "MaxSvcAmt": 49999,
+    "SvcAmt": 1025
+  },
+  {
+    "MinSvcAmt": 50000,
+    "MaxSvcAmt": 99999,
+    "SvcAmt": 1800
+  },
+  {
+    "MinSvcAmt": 100000,
+    "MaxSvcAmt": 199999,
+    "SvcAmt": 2500
+  },
+  {
+    "MinSvcAmt": 200000,
+    "MaxSvcAmt": 299999,
+    "SvcAmt": 3000
+  },
+  {
+    "MinSvcAmt": 300000,
+    "MaxSvcAmt": 399999,
+    "SvcAmt": 3750
+  },
+  {
+    "MinSvcAmt": 400000,
+    "MaxSvcAmt": 499999,
+    "SvcAmt": 3750
+  },
+  {
+    "MinSvcAmt": 500000,
+    "MaxSvcAmt": 599999,
+    "SvcAmt": 5500
+  },
+  {
+    "MinSvcAmt": 600000,
+    "MaxSvcAmt": 699999,
+    "SvcAmt": 8250
+  },
+  {
+    "MinSvcAmt": 700000,
+    "MaxSvcAmt": 799999,
+    "SvcAmt": 8250
+  },
+  {
+    "MinSvcAmt": 800000,
+    "MaxSvcAmt": 899999,
+    "SvcAmt": 8750
+  },
+  {
+    "MinSvcAmt": 900000,
+    "MaxSvcAmt": 1000000,
+    "SvcAmt": 8750
+  },
+  {
+    "MinSvcAmt": 1000001,
+    "MaxSvcAmt": 3000000,
+    "SvcAmt": 12500
+  }
+]

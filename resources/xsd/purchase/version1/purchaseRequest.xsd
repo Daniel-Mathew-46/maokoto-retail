@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="eRtl">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="PurcReq">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="PurcHd">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="SpRefNum" type="SpRefNumString"/>
+                                        <xs:element name="PurcReqId" type="PurcReqIdString"/>
+                                        <xs:element name="SpSysId" type="SpSysIdString"/>
+                                        <xs:element name="PurcClBckUrl" type="PurcClBckUrlString"/>
+                                        <xs:element name="DevId" type="DevIdString"/>
+                                        <xs:element name="PurcBulkFlag" type="PurcBulkFlagString"/>
+                                        <xs:element name="PurcRespFlag" type="PurcRespFlagString"/>
+                                        <xs:element name="Vrs" type="VrsString"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="PurcDtl">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="PurcId" type="PurcIdString"/>
+                                        <xs:element name="PurcTxIdNum" type="PurcTxIdNumString"/>
+                                        <xs:element name="SubSpRefNum" type="SubSpRefNumString"/>
+                                        <xs:element name="RtlCentCode" type="RtlCentCodeString"/>
+                                        <xs:element name="SpSysId" type="SpSysIdString"/>
+                                        <xs:element name="PurcAmt" type="PurcAmtDecimal"/>
+                                        <xs:element name="PurcEqvAmt" type="PurcEqvAmtDecimal"/>
+                                        <xs:element name="PurcTxAmt" type="PurcTxAmtDecimal"/>
+                                        <xs:element name="PurcTxEqvAmt" type="PurcTxEqvAmtDecimal"/>
+                                        <xs:element name="PurcRtAmt" type="PurcRtAmtDecimal"/>
+                                        <xs:element name="PurcQty" type="PurcQtyDecimal"/>
+                                        <xs:element name="PurcItmNum" type="PurcItmNumDecimal"/>
+                                        <xs:element name="PurcDt" type="PurcDtDateTime"/>
+                                        <xs:element name="IdTyp" type="IdTypString"/>
+                                        <xs:element name="SupplId" type="SupplIdString"/>
+                                        <xs:element name="SupplNm" type="SupplNmString"/>
+                                        <xs:element name="SupplEmail" type="SupplEmailString"/>
+                                        <xs:element name="SupplPhNum" type="SupplPhNumString"/>
+                                        <xs:element name="PurcDevId" type="PurcDevIdString"/>
+                                        <xs:element name="PurcDevNum" type="PurcDevNumString"/>
+                                        <xs:element name="PurcDesc" type="PurcDescString"/>
+                                        <xs:element name="PurcGenDt" type="PurcGenDtDateTime"/>
+                                        <xs:element name="PurcGenBy" type="PurcGenByString"/>
+                                        <xs:element name="PurcApvdDt" type="PurcApvdDtDateTime"/>
+                                        <xs:element name="PurcApvdBy" type="PurcApvdByString"/>
+                                        <xs:element name="Ccy" type="CcyString"/>
+                                        <xs:element name="EfdSNum" type="EfdSNumString"/>
+                                        <xs:element name="RctVrfNum" type="RctVrfNumString"/>
+                                        <xs:element name="PurcDlyCt" type="PurcDlyCtDecimal" />
+                                        <xs:element name="PurcGlCt" type="PurcGlCtDecimal" />
+                                        <xs:element name="PurcRefNum" type="PurcRefNumString"/>
+                                        <xs:element name="PurcBulkRefNum" type="PurcBulkRefNumString"/>
+                                        <xs:element maxOccurs="unbounded" name="PurcItm">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="PurcItmCode" type="PurcItmCodeString"/>
+                                                    <xs:element name="PurcItmNm" type="PurcItmNmString"/>
+                                                    <xs:element name="PurcItmTxCode" type="PurcItmTxCodeString"/>
+                                                    <xs:element name="PurcItmTxAmt" type="PurcItmTxAmtDecimal"/>
+                                                    <xs:element name="PurcItmTxEqvAmt" type="PurcItmTxEqvAmtDecimal" />
+                                                    <xs:element name="PurcItmAmt" type="PurcItmAmtDecimal"/>
+                                                    <xs:element name="PurcItmEqvAmt" type="PurcItmEqvAmtDecimal"/>
+                                                    <xs:element name="PurcItmQty" type="PurcItmQtyDecimal"/>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="eRtlSignature" type="eRtlSignatureString"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <!--=================Start Header Xds Validation=================-->
+    <xs:simpleType name="SpRefNumString">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="9"/>
+            <xs:maxLength value="9"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="PurcReqIdString">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="SpSysIdString">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="PurcClBckUrlString">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="DevIdString">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="PurcBulkFlagString">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="false"/>
+            <xs:enumeration value="true"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="PurcRespFlagString">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="false"/>
+            <xs:enumeration value="true"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="VrsString">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="1.0"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!--=================End Header Xsd Validation=================-->
+    <!--=================Start Message Payload Xsd Validation======-->
+    <xs:simpleType name="PurcIdString">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="PurcTxIdNumString">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="SubSpRefNumString">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="6"/>
+            <xs:maxLength value="6"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="RtlCentCodeString">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="6"/>
+            <xs:maxLength value="6"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="PurcAmtDecimal">
+        <xs:restriction base="xs:decimal">
+            <xs:minExclusive value="0"/>
+            <xs:totalDigits value="38"/>
+            <xs:fractionDigits value="2"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="PurcEqvAmtDecimal">
+        <xs:restriction base="xs:decimal">
+            <xs:minExclusive value="0"/>
+            <xs:totalDigits value="38"/>
+            <xs:fractionDigits value="2"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="PurcTxAmtDecimal">
+        <xs:restriction base="xs:decimal">
+            <xs:totalDigits value="38"/>
+            <xs:fractionDigits value="2"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="PurcTxEqvAmtDecimal">
+        <xs:restriction base="xs:decimal">
+            <xs:totalDigits value="38"/>
+            <xs:fractionDigits value="2"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="PurcRtAmtDecimal">
+        <xs:restriction base="xs:decimal">
+            <xs:minExclusive value="0"/>
+            <xs:totalDigits value="38"/>
+            <xs:fractionDigits value="2"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="PurcQtyDecimal">
+        <xs:restriction base="xs:decimal">
+            <xs:minExclusive value="0"/>
+            <xs:totalDigits value="38"/>
+            <xs:fractionDigits value="2"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="PurcItmNumDecimal">
+        <xs:restriction base="xs:decimal">
+            <xs:minExclusive value="0"/>
+            <xs:totalDigits value="38"/>
+            <xs:fractionDigits value="2"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="PurcDtDateTime">
+        <xs:restriction base="xs:dateTime">
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="IdTypString">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+            <xs:pattern value="[1-9]+"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="SupplIdString">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="([a-zA-Z0-9 _\\:.+=\-^,^;?|*\[\]{}()@/#$%^'~`&amp;&quot;&apos;&lt;&gt;\n\r]*)"/>
+            <xs:maxLength value="200"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="SupplNmString">
+        <xs:restriction base="xs:string">
+            <xs:pattern
+                    value="([\p{IsBasicLatin}\p{IsLatin-1Supplement}\w\s\\:.+=\-^,^;?|*\[\]{}()@/#$%^'~`&amp;&quot;&apos;&lt;&gt;\n\r]*)"/>
+            <xs:maxLength value="200"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="SupplEmailString">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="200"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="SupplPhNumString">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="([0-9]*)"/>
+            <xs:maxLength value="12"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="PurcDevIdString">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="PurcDevNumString">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="20"/>
+            <xs:maxLength value="20"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="PurcDescString">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+            <xs:maxLength value="500"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="PurcGenDtDateTime">
+        <xs:restriction base="xs:dateTime">
+        </xs:restriction>
+    </xs:simpleType>
+
+
+    <xs:simpleType name="PurcGenByString">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="([a-zA-Z0-9 _\\:.+=\-^,^;?|*\[\]{}()@/#$%^'~`&amp;&quot;&apos;&lt;&gt;\n\r]*)"/>
+            <xs:minLength value="1"/>
+            <xs:maxLength value="500"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="PurcApvdDtDateTime">
+        <xs:restriction base="xs:dateTime">
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="PurcApvdByString">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="([a-zA-Z0-9 _\\:.+=\-^,^;?|*\[\]{}()@/#$%^'~`&amp;&quot;&apos;&lt;&gt;\n\r]*)"/>
+            <xs:minLength value="1"/>
+            <xs:maxLength value="500"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="CcyString">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+            <xs:pattern value="[A-Z]{3}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="RctVrfNumString">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="200"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="EfdSNumString">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="PurcDlyCtDecimal">
+        <xs:restriction base="xs:decimal">
+            <xs:totalDigits value="38"/>
+            <xs:fractionDigits value="2"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="PurcGlCtDecimal">
+        <xs:restriction base="xs:decimal">
+            <xs:totalDigits value="38"/>
+            <xs:fractionDigits value="2"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="PurcRefNumString">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="PurcBulkRefNumString">
+        <xs:restriction base="xs:string">
+        </xs:restriction>
+    </xs:simpleType>
+
+
+    <xs:simpleType name="PurcItmCodeString">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="30"/>
+            <xs:maxLength value="30"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="PurcItmTxCodeString">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="8"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="PurcItmNmString">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="500"/>
+            <xs:pattern value="([a-zA-Z0-9 _\\:.+=\-^,^;?|*\[\]{}()@/#$%^'~`&amp;&quot;&apos;&lt;&gt;\n\r]*)"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="PurcItmTxAmtDecimal">
+        <xs:restriction base="xs:decimal">
+            <xs:totalDigits value="38"/>
+            <xs:fractionDigits value="2"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="PurcItmTxEqvAmtDecimal">
+        <xs:restriction base="xs:decimal">
+            <xs:totalDigits value="38"/>
+            <xs:fractionDigits value="2"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="PurcItmAmtDecimal">
+        <xs:restriction base="xs:decimal">
+            <xs:minExclusive value="0"/>
+            <xs:totalDigits value="38"/>
+            <xs:fractionDigits value="2"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="PurcItmEqvAmtDecimal">
+        <xs:restriction base="xs:decimal">
+            <xs:minExclusive value="0"/>
+            <xs:totalDigits value="38"/>
+            <xs:fractionDigits value="2"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="PurcItmQtyDecimal">
+        <xs:restriction base="xs:decimal">
+            <xs:minExclusive value="0"/>
+            <xs:totalDigits value="38"/>
+            <xs:fractionDigits value="2"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="eRtlSignatureString">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <!--=================End Message Payload Xsd Validation======-->
+
+</xs:schema>

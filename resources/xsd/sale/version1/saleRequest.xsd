@@ -1,0 +1,565 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="eRtl">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SaleReq">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="SaleHd">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="SpRefNum" type="SpRefNumString"/>
+                                        <xs:element name="SlReqId" type="SlReqIdString"/>
+                                        <xs:element name="SpSysId" type="SpSysIdString"/>
+                                        <xs:element name="SlClBckUrl" type="SlClBckUrlString"/>
+                                        <xs:element name="PymtClBckUrl" type="PymtClBckUrlString"/>
+                                        <xs:element name="ZRClBckUrl" type="ZRClBckUrlString"/>
+                                        <xs:element name="DevId" type="DevIdString"/>
+                                        <xs:element name="SlBulkFlag" type="SlBulkFlagString"/>
+                                        <xs:element name="SlRespFlag" type="SlRespFlagString"/>
+                                        <xs:element name="Vrs" type="VrsString"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="SaleDtl">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="SlId" type="SlIdString"/>
+                                        <xs:element name="SlTxIdNum" type="SlTxIdNumString"/>
+                                        <xs:element name="SubSpRefNum" type="SubSpRefNumString"/>
+                                        <xs:element name="RtlCentCode" type="RtlCentCodeString"/>
+                                        <xs:element name="SpSysId" type="SpSysIdString"/>
+                                        <xs:element name="BillAmt" type="BillAmtDecimal"/>
+                                        <xs:element name="BillEqvAmt" type="BillEqvAmtDecimal"/>
+                                        <xs:element name="SlAmt" type="SlAmtDecimal"/>
+                                        <xs:element name="SlEqvAmt" type="SlEqvAmtDecimal"/>
+                                        <xs:element name="SlTxAmt" type="SlTxAmtDecimal"/>
+                                        <xs:element name="SlTxEqvAmt" type="SlTxEqvAmtDecimal"/>
+                                        <xs:element name="SlDiscAmt" type="SlDiscAmtDecimal"/>
+                                        <xs:element name="SlDiscEqvAmt" type="SlDiscEqvAmtDecimal"/>
+                                        <xs:element name="SlCstAmt" type="SlCstAmtDecimal"/>
+                                        <xs:element name="SlCstEqvAmt" type="SlCstEqvAmtDecimal"/>
+                                        <xs:element name="SlPftAmt" type="SlPftAmtDecimal"/>
+                                        <xs:element name="SlPftEqvAmt" type="SlPftEqvAmtDecimal"/>
+                                        <xs:element name="SlRtAmt" type="SlRtAmtDecimal"/>
+                                        <xs:element name="SlQty" type="SlQtyDecimal"/>
+                                        <xs:element name="SlItmNum" type="SlItmNumDecimal"/>
+                                        <xs:element name="SlDt" type="SlDtDateTime"/>
+                                        <xs:element name="IdTyp" type="IdTypString"/>
+                                        <xs:element name="CustomId" type="CustomIdString"/>
+                                        <xs:element name="CustomNm" type="CustomNmString"/>
+                                        <xs:element name="CustomEmail" type="CustomEmailString"/>
+                                        <xs:element name="CustomPhNum" type="CustomPhNumString"/>
+                                        <xs:element name="CustomVrn" type="CustomVrnString"/>
+                                        <xs:element name="SlDevId" type="SlDevIdString"/>
+                                        <xs:element name="SlDevNum" type="SlDevNumString"/>
+                                        <xs:element name="SlDesc" type="SlDescString"/>
+                                        <xs:element name="SlGenDt" type="SlGenDtDateTime"/>
+                                        <xs:element name="SlGenBy" type="SlGenByString"/>
+                                        <xs:element name="SlApvdDt" type="SlApvdDtDateTime"/>
+                                        <xs:element name="SlApvdBy" type="SlApvdByString"/>
+                                        <xs:element name="Ccy" type="CcyString"/>
+                                        <xs:element name="SlPmTyp" type="SlPmTypString"/>
+                                        <xs:element name="DlyCt" type="DlyCtDecimal"/>
+                                        <xs:element name="GlCt" type="GlCtDecimal"/>
+                                        <xs:element name="ZNum" type="ZNumString"/>
+                                        <xs:element name="RctNum" type="RctNumString"/>
+                                        <xs:element name="RctVrfNum" type="RctVrfNumString"/>
+                                        <xs:element name="EfdSNum" type="EfdSNumString"/>
+                                        <xs:element name="SlRefNum" type="SlRefNumString"/>
+                                        <xs:element name="SlBulkRefNum" type="SlBulkRefNumString"/>
+                                        <xs:element maxOccurs="unbounded" name="SaleItm">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="SlItmCode" type="SlItmCodeString"/>
+                                                    <xs:element name="SlItmNm" type="SlItmNmString"/>
+                                                    <xs:element name="SlItmTxCode" type="SlItmTxCodeString"/>
+                                                    <xs:element name="BillItmAmt" type="BillItmAmtDecimal"/>
+                                                    <xs:element name="BillItmEqvAmt" type="BillItmEqvAmtDecimal"/>
+                                                    <xs:element name="SlItmAmt" type="SlItmAmtDecimal"/>
+                                                    <xs:element name="SlItmEqvAmt" type="SlItmEqvAmtDecimal"/>
+                                                    <xs:element name="SlItmTxAmt" type="SlItmTxAmtDecimal"/>
+                                                    <xs:element name="SlItmTxEqvAmt" type="SlItmTxEqvAmtDecimal"/>
+                                                    <xs:element name="SlItmDiscAmt" type="SlItmDiscAmtDecimal"/>
+                                                    <xs:element name="SlItmDiscEqvAmt" type="SlItmDiscEqvAmtDecimal"/>
+                                                    <xs:element name="SlItmCstAmt" type="SlItmCstAmtDecimal"/>
+                                                    <xs:element name="SlItmCstEqvAmt" type="SlItmCstEqvAmtDecimal"/>
+                                                    <xs:element name="SlItmPftAmt" type="SlItmPftAmtDecimal"/>
+                                                    <xs:element name="SlItmPftEqvAmt" type="SlItmPftEqvAmtDecimal"/>
+                                                    <xs:element name="SlItmQty" type="SlItmQtyDecimal"/>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="eRtlSignature" type="eRtlSignatureString"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!--=================Start Header Xds Validation=================-->
+    <xs:simpleType name="SpRefNumString">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="9"/>
+            <xs:maxLength value="9"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="SlReqIdString">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="SpSysIdString">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="SlClBckUrlString">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="PymtClBckUrlString">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="ZRClBckUrlString">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="DevIdString">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="SlBulkFlagString">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="false"/>
+            <xs:enumeration value="true"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="SlRespFlagString">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="false"/>
+            <xs:enumeration value="true"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="VrsString">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="1.0"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!--=================End Header Xsd Validation=================-->
+    <!--=================Start Message Payload Xsd Validation======-->
+    <xs:simpleType name="SlIdString">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="SlTxIdNumString">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="SubSpRefNumString">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="6"/>
+            <xs:maxLength value="6"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="RtlCentCodeString">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="6"/>
+            <xs:maxLength value="6"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="BillAmtDecimal">
+        <xs:restriction base="xs:decimal">
+            <xs:minExclusive value="0"/>
+            <xs:totalDigits value="38"/>
+            <xs:fractionDigits value="2"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="BillEqvAmtDecimal">
+        <xs:restriction base="xs:decimal">
+            <xs:minExclusive value="0"/>
+            <xs:totalDigits value="38"/>
+            <xs:fractionDigits value="2"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="SlAmtDecimal">
+        <xs:restriction base="xs:decimal">
+            <xs:minExclusive value="0"/>
+            <xs:totalDigits value="38"/>
+            <xs:fractionDigits value="2"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="SlTxAmtDecimal">
+        <xs:restriction base="xs:decimal">
+            <xs:totalDigits value="38"/>
+            <xs:fractionDigits value="2"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="SlTxEqvAmtDecimal">
+        <xs:restriction base="xs:decimal">
+            <xs:totalDigits value="38"/>
+            <xs:fractionDigits value="2"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="SlDiscAmtDecimal">
+        <xs:restriction base="xs:decimal">
+            <xs:totalDigits value="38"/>
+            <xs:fractionDigits value="2"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="SlDiscEqvAmtDecimal">
+        <xs:restriction base="xs:decimal">
+            <xs:totalDigits value="38"/>
+            <xs:fractionDigits value="2"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="SlRtAmtDecimal">
+        <xs:restriction base="xs:decimal">
+            <xs:minExclusive value="0"/>
+            <xs:totalDigits value="38"/>
+            <xs:fractionDigits value="2"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="SlCstAmtDecimal">
+        <xs:restriction base="xs:decimal">
+            <xs:totalDigits value="38"/>
+            <xs:fractionDigits value="2"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="SlCstEqvAmtDecimal">
+        <xs:restriction base="xs:decimal">
+            <xs:totalDigits value="38"/>
+            <xs:fractionDigits value="2"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="SlPftAmtDecimal">
+        <xs:restriction base="xs:decimal">
+            <xs:totalDigits value="38"/>
+            <xs:fractionDigits value="2"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="SlPftEqvAmtDecimal">
+        <xs:restriction base="xs:decimal">
+            <xs:totalDigits value="38"/>
+            <xs:fractionDigits value="2"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="SlEqvAmtDecimal">
+        <xs:restriction base="xs:decimal">
+            <xs:minExclusive value="0"/>
+            <xs:totalDigits value="38"/>
+            <xs:fractionDigits value="2"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="SlQtyDecimal">
+        <xs:restriction base="xs:decimal">
+            <xs:minExclusive value="0"/>
+            <xs:totalDigits value="38"/>
+            <xs:fractionDigits value="2"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="SlItmNumDecimal">
+        <xs:restriction base="xs:decimal">
+            <xs:minExclusive value="0"/>
+            <xs:totalDigits value="38"/>
+            <xs:fractionDigits value="2"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="SlDtDateTime">
+        <xs:restriction base="xs:dateTime">
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="IdTypString">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+            <xs:pattern value="[1-9]+"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="CustomIdString">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="([a-zA-Z0-9 _\\:.+=\-^,^;?|*\[\]{}()@/#$%^'~`&amp;&quot;&apos;&lt;&gt;\n\r]*)"/>
+            <xs:maxLength value="200"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="CustomNmString">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="200"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="CustomEmailString">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="200"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="CustomPhNumString">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="([0-9]*)"/>
+            <xs:maxLength value="12"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="CustomVrnString">
+        <xs:restriction base="xs:string">
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="SlDevIdString">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="SlDevNumString">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="20"/>
+            <xs:maxLength value="20"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="SlDescString">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+            <xs:maxLength value="500"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="SlGenDtDateTime">
+        <xs:restriction base="xs:dateTime">
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="SlGenByString">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="([a-zA-Z0-9 _\\:.+=\-^,^;?|*\[\]{}()@/#$%^'~`&amp;&quot;&apos;&lt;&gt;\n\r]*)"/>
+            <xs:minLength value="1"/>
+            <xs:maxLength value="500"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="SlApvdDtDateTime">
+        <xs:restriction base="xs:dateTime">
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="SlApvdByString">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="([a-zA-Z0-9 _\\:.+=\-^,^;?|*\[\]{}()@/#$%^'~`&amp;&quot;&apos;&lt;&gt;\n\r]*)"/>
+            <xs:minLength value="1"/>
+            <xs:maxLength value="500"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="CcyString">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+            <xs:pattern value="[A-Z]{3}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="SlPmTypString">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+            <xs:enumeration value="CASH"/>
+            <xs:enumeration value="CHEQUE"/>
+            <xs:enumeration value="CCARD"/>
+            <xs:enumeration value="EMONEY"/>
+            <xs:enumeration value="INVOICE"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="DlyCtDecimal">
+        <xs:restriction base="xs:decimal">
+            <xs:totalDigits value="38"/>
+            <xs:fractionDigits value="2"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="GlCtDecimal">
+        <xs:restriction base="xs:decimal">
+            <xs:totalDigits value="38"/>
+            <xs:fractionDigits value="2"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="ZNumString">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="RctNumString">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="RctVrfNumString">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="EfdSNumString">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="SlRefNumString">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="SlBulkRefNumString">
+        <xs:restriction base="xs:string">
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="SlItmCodeString">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="30"/>
+            <xs:maxLength value="30"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="SlItmTxCodeString">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+            <xs:maxLength value="10"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="SlItmNmString">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="500"/>
+            <xs:pattern value="([a-zA-Z0-9 _\\:.+=\-^,^;?|*\[\]{}()@/#$%^'~`&amp;&quot;&apos;&lt;&gt;\n\r]*)"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="BillItmAmtDecimal">
+        <xs:restriction base="xs:decimal">
+            <xs:minExclusive value="0"/>
+            <xs:totalDigits value="38"/>
+            <xs:fractionDigits value="2"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="BillItmEqvAmtDecimal">
+        <xs:restriction base="xs:decimal">
+            <xs:minExclusive value="0"/>
+            <xs:totalDigits value="38"/>
+            <xs:fractionDigits value="2"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="SlItmAmtDecimal">
+        <xs:restriction base="xs:decimal">
+            <xs:minExclusive value="0"/>
+            <xs:totalDigits value="38"/>
+            <xs:fractionDigits value="2"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="SlItmTxAmtDecimal">
+        <xs:restriction base="xs:decimal">
+            <xs:totalDigits value="38"/>
+            <xs:fractionDigits value="2"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="SlItmTxEqvAmtDecimal">
+        <xs:restriction base="xs:decimal">
+            <xs:totalDigits value="38"/>
+            <xs:fractionDigits value="2"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="SlItmDiscAmtDecimal">
+        <xs:restriction base="xs:decimal">
+            <xs:totalDigits value="38"/>
+            <xs:fractionDigits value="2"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="SlItmDiscEqvAmtDecimal">
+        <xs:restriction base="xs:decimal">
+            <xs:totalDigits value="38"/>
+            <xs:fractionDigits value="2"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="SlItmCstAmtDecimal">
+        <xs:restriction base="xs:decimal">
+            <xs:totalDigits value="38"/>
+            <xs:fractionDigits value="2"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="SlItmCstEqvAmtDecimal">
+        <xs:restriction base="xs:decimal">
+            <xs:totalDigits value="38"/>
+            <xs:fractionDigits value="2"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="SlItmPftAmtDecimal">
+        <xs:restriction base="xs:decimal">
+            <xs:totalDigits value="38"/>
+            <xs:fractionDigits value="2"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="SlItmPftEqvAmtDecimal">
+        <xs:restriction base="xs:decimal">
+            <xs:totalDigits value="38"/>
+            <xs:fractionDigits value="2"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="SlItmEqvAmtDecimal">
+        <xs:restriction base="xs:decimal">
+            <xs:minExclusive value="0"/>
+            <xs:totalDigits value="38"/>
+            <xs:fractionDigits value="2"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="SlItmQtyDecimal">
+        <xs:restriction base="xs:decimal">
+            <xs:minExclusive value="0"/>
+            <xs:totalDigits value="38"/>
+            <xs:fractionDigits value="2"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="eRtlSignatureString">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <!--=================End Message Payload Xsd Validation======-->
+
+</xs:schema>
+
+

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="eRtl">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SetupInfResp">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="SetupRespId" type="xs:string" />
+                            <xs:element name="SetupReqId" type="xs:string" />
+                            <xs:element name="SetupTyp" type="xs:string" />
+                            <xs:element name="RegId" type="xs:string" />
+                            <xs:element name="EfdSNum" type="xs:string" />
+                            <xs:element name="UsrIdNum" type="xs:string" />
+                            <xs:element name="TxIdNum" type="xs:string" />
+                            <xs:element name="VatRegNum" type="xs:string" />
+                            <xs:element name="Mob" type="xs:string" />
+                            <xs:element name="Addrs" maxOccurs="1" minOccurs="0" type="xs:string" />
+                            <xs:element name="St" type="xs:string" />
+                            <xs:element name="Cy" type="xs:string" />
+                            <xs:element name="Cty" type="xs:string" />
+                            <xs:element name="Nm" type="xs:string" />
+                            <xs:element name="RctCode" type="xs:string" />
+                            <xs:element name="RgnNm" type="xs:string" />
+                            <xs:element name="GlCt" type="xs:string" />
+                            <xs:element name="TxOfc" type="xs:string" />
+                            <xs:element name="UsrAuth" type="xs:string" />
+                            <xs:element name="TokenPath" type="xs:string" />
+                            <xs:element name="RtKey" type="xs:string" />
+                            <xs:element name="Vrs" type="xs:decimal" />
+                            <xs:element name="StsCode" type="xs:unsignedShort" />
+                            <xs:element name="StsDesc" type="xs:string" />
+                            <xs:element maxOccurs="unbounded" name="ItmTxCodeDtl">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="ItmTxCodeNm" type="xs:string" />
+                                        <xs:element name="ItmTxCode" type="xs:string" />
+                                        <xs:element name="ItmTxCodeDesc" type="xs:string" />
+                                        <xs:element name="ItmTxCodeRt" type="xs:string" />
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="eRtlSignature" type="xs:string" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

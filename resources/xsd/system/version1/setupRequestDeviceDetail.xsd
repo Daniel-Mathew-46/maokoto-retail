@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="eRtl">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SetupInfReq">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="SetHd">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="SpRefNum" type="SpRefNumString"/>
+                                        <xs:element name="SetupReqId" type="SetupReqIdString"/>
+                                        <xs:element name="SpSysId" type="SpSysIdString"/>
+                                        <xs:element name="SetupTyp" type="SetupTypString"/>
+                                        <xs:element name="SetClBckUrl" type="SetClBckUrlString"/>
+                                        <xs:element name="DevId" type="DevIdString"/>
+                                        <xs:element name="SetupRespFlag" type="SetupRespFlagString"/>
+                                        <xs:element name="Vrs" type="VrsString"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="SetupDtl" maxOccurs="unbounded" minOccurs="1">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="SubSpRefNum" type="SubSpRefNumString"/>
+                                        <xs:element name="RtlCentCode" type="RtlCentCodeString"/>
+                                        <xs:element name="DevCode" type="DevCodeString"/>
+                                        <xs:element name="DevMdlCode" type="DevMdlCodeString"/>
+                                        <xs:element name="DevId" type="DevIdString"/>
+                                        <xs:element name="DevId1" type="DevId1String"/>
+                                        <xs:element name="DevId2" type="DevId2String"/>
+                                        <xs:element name="DevId3" type="DevId3String"/>
+                                        <xs:element name="SlLmt" type="SlLmtDecimal"/>
+                                        <xs:element name="GenBy" type="GenByString"/>
+                                        <xs:element name="GenDt" type="GenDtDateTime"/>
+                                        <xs:element name="ApvdBy" type="ApvdByString"/>
+                                        <xs:element name="ApvdDt" type="ApvdDtDateTime"/>
+                                        <xs:element name="StsCode" type="StsCodeString"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="eRtlSignature" type="eRtlSignatureString"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!--=================Start Header Xds Validation=================-->
+    <xs:simpleType name="SpRefNumString">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="9"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="SetupReqIdString">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="SpSysIdString">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="SetupTypString">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="SET005"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="SetClBckUrlString">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="DevIdString">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="SetupRespFlagString">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="false"/>
+            <xs:enumeration value="true"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="VrsString">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="1.0"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!--=================End Header Xsd Validation=================-->
+
+    <!--=================Start Message Payload Xsd Validation======-->
+    <xs:simpleType name="SubSpRefNumString">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="6"/>
+            <xs:maxLength value="6"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="RtlCentCodeString">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="6"/>
+            <xs:maxLength value="6"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="DevCodeString">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="5"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="DevMdlCodeString">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="DevId1String">
+        <xs:restriction base="xs:string">
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="DevId2String">
+        <xs:restriction base="xs:string">
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="DevId3String">
+        <xs:restriction base="xs:string">
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="SlLmtDecimal">
+        <xs:restriction base="xs:decimal">
+            <xs:minExclusive value="0"/>
+            <xs:totalDigits value="38"/>
+            <xs:fractionDigits value="0"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="GenDtDateTime">
+        <xs:restriction base="xs:dateTime">
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="GenByString">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="([a-zA-Z0-9 _\\:.+=\-^,^;?|*\[\]{}()@/#$%^'~`&amp;&quot;&apos;&lt;&gt;\n\r]*)"/>
+            <xs:minLength value="1"/>
+            <xs:maxLength value="100"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="ApvdByString">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="([a-zA-Z0-9 _\\:.+=\-^,^;?|*\[\]{}()@/#$%^'~`&amp;&quot;&apos;&lt;&gt;\n\r]*)"/>
+            <xs:minLength value="1"/>
+            <xs:maxLength value="100"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="ApvdDtDateTime">
+        <xs:restriction base="xs:dateTime">
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="StsCodeString">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="5"/>
+            <xs:pattern value="[0-9]{5}"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="eRtlSignatureString">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <!--=================End Message Payload Xsd Validation======-->
+</xs:schema>

@@ -1,0 +1,801 @@
+---------------------------------------------01. TAXPAYER BRANCH API SERVICES-----------------------
+REQUEST TYPE: ASYNCHRONOUS(QUEUE)
+
+
+REQUEST HEADERS:
+
+Content-Type: application/xml
+SpRefNum: C000003EM
+SetupReqId: ADBBD788ACC1F1D0FD0B8A1C0C9F121A861B5293D550293A23A5E038C627F528
+Vrs: 1.0
+SpSysId: ADVATECHT001
+SetupTyp: SET002
+------------
+
+METHOD : POST 
+
+URL: http://137.184.53.63:7980/api/settings-notification/manage-system-setup
+
+REQUEST BODY:
+ Taxpayer system will send request for branch system setup
+
+<eRtl>
+    <SetupInfReq>
+        <SetHd>
+            <SpRefNum>C000003EM</SpRefNum>
+            <SetupReqId>C6BD5372BB9A223F03D8F206CFD3CC52CEB7A4D7370AB0AD4A36A31F9554B0F3</SetupReqId>
+            <SpSysId>ADVATECHT001</SpSysId>
+            <SetupTyp>SET002</SetupTyp>
+            <SetClBckUrl>http://137.184.53.63/advatech-vfd-service/api/setting/incoming-system-setup-response</SetClBckUrl>
+            <DevId>E78C3844FA6204D73B3E1718A0AFBB37C73E688B5B59DB214ACBA7A94BE6A33B</DevId>
+            <SetupRespFlag>true</SetupRespFlag>
+            <Vrs>1.0</Vrs>
+        </SetHd>
+        <SetupDtl>
+            <SubSpRefNum></SubSpRefNum>
+            <SubSpNm>VINGUNGUTI KWAMNYAMANI</SubSpNm>
+            <SubSpDesc>VINGUNGUTI KWA MNYAMANI TAX OFFICE</SubSpDesc>
+            <SpRefNum>C000003EM</SpRefNum>
+            <SvcFlag>false</SvcFlag>
+            <SvcVrs>1.0</SvcVrs>
+            <NegInvFlag>false</NegInvFlag>
+            <InvCtrlFlag>true</InvCtrlFlag>
+            <PndSlFlag>false</PndSlFlag>
+            <GenDt>2023-07-30T08:28:20</GenDt>
+            <GenBy>chuma.sitta</GenBy>
+            <ApvdBy>chuma.sitta</ApvdBy>
+            <ApvdDt>2023-07-30T08:28:20</ApvdDt>
+            <StsCode>10001</StsCode>
+        </SetupDtl>
+    </SetupInfReq>
+    <eRtlSignature>342f23c589ba5cf2553b25e18e7882a275a46b488473ec023b754c2fb7466892</eRtlSignature>
+</eRtl>
+
+REQUEST ACKNOWLEDGEMENT BODY:
+Advatech taxpayer service gateway will respond instantly with request acknowledgment 
+
+
+<eRtl>
+    <SetupInfReqAck>
+        <SetupAckId>93CD2D6ABC6957C37DC234B68DD8B7A4372F3FB08DDA4F1608336F60BB6F2A12</SetupAckId>
+        <SetupReqId>C6BD5372BB9A223F03D8F206CFD3CC52CEB7A4D7370AB0AD4A36A31F9554B0F3</SetupReqId>
+        <StsCode>10007</StsCode>
+        <StsDesc>Successful</StsDesc>
+    </SetupInfReqAck>
+    <eRtlSignature>ffb8cd5790af6757d22b923d961c97ed93fea660258cdb3cea1985cb5736955a</eRtlSignature>
+</eRtl>
+
+
+FINAL RESPONSE BODY:
+Advatech taxpayer service gateway after processing request will send final response through callback url submitted by taxpayer system.
+
+<eRtl>
+    <SetupInfResp>
+        <SetupRespId>948D7B0233D965BC0A449BFFBA01BC85C5405BDC6D0C6B7A691D8515793BA9A5</SetupRespId>
+        <SetupReqId>C6BD5372BB9A223F03D8F206CFD3CC52CEB7A4D7370AB0AD4A36A31F9554B0F3</SetupReqId>
+        <SetupTyp>SET002</SetupTyp>
+        <SubSpRefNum>U000BH</SubSpRefNum>
+        <Vrs>1.0</Vrs>
+        <StsCode>10007</StsCode>
+        <StsDesc>Successful</StsDesc>
+    </SetupInfResp>
+    <eRtlSignature>ffb8cd5790af6757d22b923d961c97ed93fea660258cdb3cea1985cb5736955a</eRtlSignature>
+</eRtl>
+
+
+RESPONSE ACKNOWLEDGEMENT BODY:
+
+Taxpayer system will respond instantly after receiving final response from Advatech taxpayer service gateway.
+
+<eRtl>
+    <SetupInfRespAck>
+        <SetupRespId>948D7B0233D965BC0A449BFFBA01BC85C5405BDC6D0C6B7A691D8515793BA9A5</SetupRespId>
+        <SetupReqId>C6BD5372BB9A223F03D8F206CFD3CC52CEB7A4D7370AB0AD4A36A31F9554B0F3</SetupReqId>
+        <StsCode>10007</StsCode>
+        <StsDesc>Successful</StsDesc>
+    </SetupInfRespAck>
+    <eRtlSignature>ffb8cd5790af6757d22b923d961c97ed93fea660258cdb3cea1985cb5736955a</eRtlSignature>
+</eRtl>
+
+
+ADD Tables For TAG Description
+
+
+
+
+---------------------------------------------02. TAXPAYER RETAIL CENTER API SERVICES-----------------------
+REQUEST TYPE: ASYNCHRONOUS(QUEUE)
+
+REQUEST HEADERS:
+
+Content-Type: application/xml
+SpRefNum: C000006CM
+SetupReqId: ADBBD788ACC1F1D0FD0B8A1C0C9F121A861B5293D550293A23A5E038C627F528
+Vrs: 1.0
+SpSysId: ADVATECHT001
+SetupTyp: SET003
+
+---------------------------
+
+METHOD : POST 
+
+URL: http://137.184.53.63:7980/api/settings-notification/manage-system-setup
+
+REQUEST BODY:
+
+<eRtl>
+    <SetupInfReq>
+        <SetHd>
+            <SpRefNum>C000003EM</SpRefNum>
+            <SetupReqId>939BB2E95916AFA8EBFE8B38FC5E0A7193F148143E6D9D886EB4B46B60AE64B3</SetupReqId>
+            <SpSysId>ADVATECHT001</SpSysId>
+            <SetupTyp>SET003</SetupTyp>
+            <SetClBckUrl>http://137.184.53.63/advatech-vfd-service/api/setting/incoming-system-setup-response</SetClBckUrl>
+            <DevId>D0398BE3D4C4AC5D6F10DEE203A5990AD6AADFBE777D209C34DBFFB8E4D4329F</DevId>
+            <SetupRespFlag>true</SetupRespFlag>
+            <Vrs>1.0</Vrs>
+        </SetHd>
+        <SetupDtl>
+            <SpRefNum>C000003EM</SpRefNum>
+            <SubSpRefNum>U0009H</SubSpRefNum>
+            <RtlCentDesc>KINYAHA GENERAL WORKS AND SUPPLIES LIMITED</RtlCentDesc>
+            <RtlCentCode></RtlCentCode>
+            <DistCode>2001</DistCode>
+            <RgnCode>1000</RgnCode>
+            <GenDt>2023-07-30T08:58:56</GenDt>
+            <GenBy>chuma.sitta</GenBy>
+            <ApvdBy>chuma.sitta</ApvdBy>
+            <ApvdDt>2023-07-30T08:58:56</ApvdDt>
+            <StsCode>10001</StsCode>
+        </SetupDtl>
+    </SetupInfReq>
+    <eRtlSignature>ffb8cd5790af6757d22b923d961c97ed93fea660258cdb3cea1985cb5736955a</eRtlSignature>
+</eRtl>
+
+REQUEST ACKNOWLEDGEMENT BODY:
+
+<eRtl>
+    <SetupInfReqAck>
+        <SetupAckId>D4BCB90BE861F315EAFCE062D13F3A720A4DA18ED621002A56FD220BECFB9C42</SetupAckId>
+        <SetupReqId>939BB2E95916AFA8EBFE8B38FC5E0A7193F148143E6D9D886EB4B46B60AE64B3</SetupReqId>
+        <StsCode>10007</StsCode>
+        <StsDesc>Successful</StsDesc>
+    </SetupInfReqAck>
+    <eRtlSignature>ffb8cd5790af6757d22b923d961c97ed93fea660258cdb3cea1985cb5736955a</eRtlSignature>
+</eRtl>
+
+FINAL RESPONSE BODY:
+
+<eRtl>
+    <SetupInfResp>
+        <SetupRespId>D4BCB90BE861F315EAFCE062D13F3A720A4DA18ED621002A56FD220BECFB9C42</SetupRespId>
+        <SetupReqId>939BB2E95916AFA8EBFE8B38FC5E0A7193F148143E6D9D886EB4B46B60AE64B3</SetupReqId>
+        <SetupTyp>SET003</SetupTyp>
+        <RtlCentCode>A0000F</RtlCentCode>
+        <Vrs>1.0</Vrs>
+        <StsCode>10007</StsCode>
+        <StsDesc>Successful</StsDesc>
+    </SetupInfResp>
+    <eRtlSignature>ffb8cd5790af6757d22b923d961c97ed93fea660258cdb3cea1985cb5736955a</eRtlSignature>
+</eRtl>
+
+
+
+RESPONSE ACKNOWLEDGEMENT BODY:
+
+<eRtl>
+    <SetupInfRespAck>
+        <SetupRespId>D4BCB90BE861F315EAFCE062D13F3A720A4DA18ED621002A56FD220BECFB9C42</SetupRespId>
+        <SetupReqId>939BB2E95916AFA8EBFE8B38FC5E0A7193F148143E6D9D886EB4B46B60AE64B3</SetupReqId>
+        <StsCode>10007</StsCode>
+        <StsDesc>Successful</StsDesc>
+    </SetupInfRespAck>
+    <eRtlSignature>ffb8cd5790af6757d22b923d961c97ed93fea660258cdb3cea1985cb5736955a</eRtlSignature>
+</eRtl>
+
+
+
+--------------------------------03. EFDMS REGISTRATION API SERVICES----------------------------------
+REQUEST TYPE: ASYNCHRONOUS(QUEUE)
+
+REQUEST HEADERS:
+
+Content-Type: application/xml
+SpRefNum: C000003EM
+SetupReqId: ADBBD788ACC1F1D0FD0B8A1C0C9F121A861B5293D550293A23A5E038C627F528
+Vrs: 1.0
+SpSysId: ADVATECHT001
+SetupTyp: SET021
+----
+
+RESPONSE HEADERS:
+SetupTyp: SET021
+
+
+METHOD : POST 
+
+URL: http://137.184.53.63:7980/api/settings-notification/manage-system-setup
+
+NOTE:
+
+ALL TRA - COMMANDS WILL BE ENABLED THROUGH CALL BACK URL.
+
+
+REQUEST BODY:
+
+<eRtl>
+    <SetupInfReq>
+        <SetHd>
+            <SpRefNum>C000003EM</SpRefNum>
+            <SetupReqId>92D211D1B309DFD98B850AE6BEF0C4BD752A0C13D42B361DA03B44404F97D2D7</SetupReqId>
+            <SpSysId>ADVATECHT001</SpSysId>
+            <SetupTyp>SET021</SetupTyp>
+            <SetClBckUrl>http://137.184.53.63/advatech-vfd-service/api/setting/incoming-system-setup-response</SetClBckUrl>
+            <DevId>984FF7CFC02D577AF18BE251F8E434E6B6C8DB611E1630C8DC1839ED7E2BF263</DevId>
+            <SetupRespFlag>true</SetupRespFlag>
+            <Vrs>1.0</Vrs>
+        </SetHd>
+        <SetupDtl>
+            <TxIdNum>109272930</TxIdNum>
+            <EfdSNum>10TZ100806</EfdSNum>
+            <SubSpRefNum>U0009H</SubSpRefNum>
+            <RtlCentCode>A00010</RtlCentCode>
+            <VatRegNum></VatRegNum>
+            <Mob></Mob>
+            <Addrs></Addrs>
+            <St></St>
+            <Cy></Cy>
+            <Cty></Cty>
+            <Nm></Nm>
+            <RgnNm></RgnNm>
+            <TxOfc></TxOfc>
+            <GenDt>2023-07-28T15:37:28</GenDt>
+            <GenBy>e-retail.admin</GenBy>
+            <ApvdBy>e-retail.admin</ApvdBy>
+            <ApvdDt>2023-07-28T15:37:28</ApvdDt>
+            <StsCode>10001</StsCode>
+        </SetupDtl>
+    </SetupInfReq>
+    <eRtlSignature>ffb8cd5790af6757d22b923d961c97ed93fea660258cdb3cea1985cb5736955a</eRtlSignature>
+</eRtl>
+
+REQUEST ACKNOWLEDGEMENT BODY:
+
+<eRtl>
+    <SetupInfReqAck>
+        <SetupAckId>93CD2D6ABC6957C37DC234B68DD8B7A4372F3FB08DDA4F1608336F60BB6F2A12</SetupAckId>
+        <SetupReqId>92D211D1B309DFD98B850AE6BEF0C4BD752A0C13D42B361DA03B44404F97D2D7</SetupReqId>
+        <StsCode>10007</StsCode>
+        <StsDesc>Successful</StsDesc>
+    </SetupInfReqAck>
+    <eRtlSignature>ffb8cd5790af6757d22b923d961c97ed93fea660258cdb3cea1985cb5736955a</eRtlSignature>
+</eRtl>
+
+
+FINAL RESPONSE BODY:
+
+<eRtl>
+    <SetupInfResp>
+        <SetupRespId>93CD2D6ABC6957C37DC234B68DD8B7A4372F3FB08DDA4F1608336F60BB6F2A12</SetupRespId>
+        <SetupReqId>92D211D1B309DFD98B850AE6BEF0C4BD752A0C13D42B361DA03B44404F97D2D7</SetupReqId>
+        <SetupTyp>SET021</SetupTyp>
+        <RegId>TZ0100556003</RegId>
+        <EfdSNum>10TZ100806</EfdSNum>
+        <UsrIdNum>09VFDWEBAPI-10131758710927293010TZ100806</UsrIdNum>
+        <TxIdNum>109272930</TxIdNum>
+        <VatRegNum>40005334W</VatRegNum>
+        <Mob>+255 658 956 525</Mob>
+        <Addrs>A00010</Addrs>
+        <St>LIBYA PLOT NO. 815/8221</St>
+        <Cy>DAR ES SALAAM</Cy>
+        <Cty>TANZANIA</Cty>
+        <Nm>ADVATECH OFFICE SUPPLIES LIMITED.</Nm>
+        <RctCode>481EAB</RctCode>
+        <RgnNm>Ilala</RgnNm>
+        <GlCt>6934</GlCt>
+        <TxOfc>Tax Office Ilala</TxOfc>
+        <UsrAuth>eyJhY2Nlc3NfdG9rZW4iOiI0ajVFRDlLeklRTUdJbl9DVklldVV4ZHlONTlFbllPbERYQWZla0VhMXY1ZU5pMEc1OXplVTJYTl9PeHNxa2VmTVZObEI3RGtLZkJsZlc2ekg4cDhhYjJ1b2tKOWZUNExRdTRxZG9oWVRGVTQtU09pVDBZSmp1VFlqeFZ2a3VBRU1FZkxzWmVNc2kyYnVVQXdRcmJOY3ctVW5VU0tOY3lSQ2lvRGZ1M2JUblBxbEJOc2R4QnVVeHZ5MDk2bDY0cXI2Wi05X3lVc0hycklfeGdWVWNaaXR5TW1aejRLZXJDUW4wN3BrdUtUZDN5SEtfMzEtUG5TcUp0TWZBRHloWkhERnJjS1laaUpTRG9DeGVlN1pVZ0pac09laW9rYW5WVE5ZVkR4VURyN2lSakh5QnZMZzRaX1RfaGhiSmdTSzQtWktFZGQ4dVFkeWJOd196ZGs2d3Q1dVhROUxYUy1RQ0pkLS1HVWxsQW16Sms4S05LQ0pOQTBERUR5LTF0eUo0a2RJbC1VYlcxRHV4NEtYbjVhWlpad3Joek9iZWhoTm5KcVpaM0JxdHBJQzVrIiwidG9rZW5fdHlwZSI6ImJlYXJlciIsInJlZnJlc2hfdG9rZW4iOiIiLCJleHBpcmVzX2luIjo4NjM5OSwic2NvcGUiOiJSRUFEIFdSSVRFIiwiQXV0aCI6IkJhc2ljIFltRmlZV0ZwWVdjNE5Ea3daV0Y0Y0RwMmMwWTZNM1J6VDJGS1F6QlVOVklvIiwiVXNyTm0iOiJiYWJhYWlhZzg0OTBlYXhwIiwiUHNzd2QiOiJ2c0Y6M3RzT2FKQzBUNVIoIiwiR2VuRHQiOiIyMDIzLTA3LTI4VDE1OjM3OjM0In0=</UsrAuth>
+        <TokenPath>vfdtoken</TokenPath>
+        <RtKey>vfdrct</RtKey>
+        <Vrs>1.0</Vrs>
+        <StsCode>10007</StsCode>
+        <StsDesc>Successful</StsDesc>
+        <ItmTxCodeDtl>
+            <ItmTxCodeNm>A</ItmTxCodeNm>
+            <ItmTxCode>1;A;18%</ItmTxCode>
+            <ItmTxCodeDesc>STANDARD RATE</ItmTxCodeDesc>
+            <ItmTxCodeRt>18</ItmTxCodeRt>
+        </ItmTxCodeDtl>
+        <ItmTxCodeDtl>
+            <ItmTxCodeNm>B</ItmTxCodeNm>
+            <ItmTxCode>2;B;0%</ItmTxCode>
+            <ItmTxCodeDesc>SPECIAL RATE</ItmTxCodeDesc>
+            <ItmTxCodeRt>0</ItmTxCodeRt>
+        </ItmTxCodeDtl>
+        <ItmTxCodeDtl>
+            <ItmTxCodeNm>C</ItmTxCodeNm>
+            <ItmTxCode>3;C;0%</ItmTxCode>
+            <ItmTxCodeDesc>ZERO RATED</ItmTxCodeDesc>
+            <ItmTxCodeRt>0</ItmTxCodeRt>
+        </ItmTxCodeDtl>
+        <ItmTxCodeDtl>
+            <ItmTxCodeNm>D</ItmTxCodeNm>
+            <ItmTxCode>4;D;0%</ItmTxCode>
+            <ItmTxCodeDesc>SPECIAL RELIEF</ItmTxCodeDesc>
+            <ItmTxCodeRt>0</ItmTxCodeRt>
+        </ItmTxCodeDtl>
+        <ItmTxCodeDtl>
+            <ItmTxCodeNm>E</ItmTxCodeNm>
+            <ItmTxCode>5;E;0%</ItmTxCode>
+            <ItmTxCodeDesc>EXEMPTED</ItmTxCodeDesc>
+            <ItmTxCodeRt>0</ItmTxCodeRt>
+        </ItmTxCodeDtl>
+    </SetupInfResp>
+    <eRtlSignature>ffb8cd5790af6757d22b923d961c97ed93fea660258cdb3cea1985cb5736955a</eRtlSignature>
+</eRtl>
+
+
+
+RESPONSE ACKNOWLEDGEMENT BODY:
+
+<eRtl>
+    <SetupInfRespAck>
+        <SetupRespId>93CD2D6ABC6957C37DC234B68DD8B7A4372F3FB08DDA4F1608336F60BB6F2A12</SetupRespId>
+        <SetupReqId>92D211D1B309DFD98B850AE6BEF0C4BD752A0C13D42B361DA03B44404F97D2D7</SetupReqId>
+        <StsCode>10007</StsCode>
+        <StsDesc>Successful</StsDesc>
+    </SetupInfRespAck>
+    <eRtlSignature>ffb8cd5790af6757d22b923d961c97ed93fea660258cdb3cea1985cb5736955a</eRtlSignature>
+</eRtl>
+
+
+--------------------------------04. ITEM API SERVICES-----------------------
+REQUEST TYPE: SYNCHRONOUS(STRAIGHT)
+
+REQUEST HEADERS:
+
+Content-Type: application/xml
+SpRefNum: C000003EM
+SetupReqId: ADBBD788ACC1F1D0FD0B8A1C0C9F121A861B5293D550293A23A5E038C627F528
+Vrs: 1.0
+SpSysId: ADVATECHT001
+SetupTyp: SET022
+
+RESPONSE HEADERS:
+SetupTyp: SET022
+
+-----------------
+
+METHOD : POST 
+URL: http://137.184.53.63:7980/api/settings-notification/sync/manage-item-setup
+
+
+
+
+REQUEST BODY:
+
+<eRtl>
+    <SetupInfReq>
+        <SetHd>
+            <SpRefNum>C000003EM</SpRefNum>
+            <SetupReqId>ADBBD788ACC1F1D0FD0B8A1C0C9F121A861B5293D550293A23A5E038C627F528</SetupReqId>
+            <SpSysId>ADVATECHT001</SpSysId>
+            <SetupTyp>SET022</SetupTyp>
+            <SetClBckUrl>http://137.184.53.63/advatech-vfd-service/api/setting/incoming-system-setup-response</SetClBckUrl>
+            <DevId>09VFDWEBAPI-10131758710226219010TZ100811</DevId>
+            <SetupRespFlag>false</SetupRespFlag>
+            <Vrs>1.0</Vrs>
+        </SetHd>
+        <SetupDtl>
+            <ItmCode></ItmCode>
+            <ItmBrCode>6204000099017</ItmBrCode>
+            <ItmNm>Sequai-1500ML</ItmNm>
+            <ItmDesc>Sequai-1500ML</ItmDesc>
+            <ItmQty>0</ItmQty>
+            <DfltQty>1</DfltQty>
+            <ItmQtyDesc>1500ML</ItmQtyDesc>
+            <ItmAmt>1000</ItmAmt>
+            <ItmCstAmt>850</ItmCstAmt>
+            <ItmPftAmt>152.54</ItmPftAmt>
+            <ItmPctPft>0.18</ItmPctPft>
+            <ItmTxCode>1;A;18%</ItmTxCode>
+            <MstUnit>1500ML</MstUnit>
+            <SubSpRefNum>U0010H</SubSpRefNum>
+            <RtlCentCode>A00001</RtlCentCode>
+            <ItmTrfFlag>false</ItmTrfFlag>
+            <FxItmAmtFlag>false</FxItmAmtFlag>
+            <NegInvFlag>true</NegInvFlag>
+            <InvCtrlFlag>false</InvCtrlFlag>
+            <InvRstFlag>false</InvRstFlag>
+            <GenBy>chuma.manyama</GenBy>
+            <GenDt>2023-07-28T10:34:13</GenDt>
+            <ApvdBy>hope.akiyda</ApvdBy>
+            <ApvdDt>2023-07-28T10:34:13</ApvdDt>
+            <StsCode>10001</StsCode>
+        </SetupDtl>
+    </SetupInfReq>
+    <eRtlSignature>ffb8cd5790af6757d22b923d961c97ed93fea660258cdb3cea1985cb5736955a</eRtlSignature>
+</eRtl>
+
+FINAL RESPONSE BODY:
+
+
+<eRtl>
+    <SetupInfResp>
+        <SetupRespId>A8E85EE39CB45BCDAB5EA23ABBE7D7340F41922D599A7DC6DC80327F7BBDA254</SetupRespId>
+        <SetupReqId>ADBBD788ACC1F1D0FD0B8A1C0C9F121A861B5293D550293A23A5E038C627F528</SetupReqId>
+        <SetupTyp>SET022</SetupTyp>
+        <ItmCode>EC000006CMD0001DC0D4500000000B</ItmCode>
+        <Vrs>1.0</Vrs>
+        <StsCode>10007</StsCode>
+        <StsDesc>Successful</StsDesc>
+    </SetupInfResp>
+    <eRtlSignature>ffb8cd5790af6757d22b923d961c97ed93fea660258cdb3cea1985cb5736955a</eRtlSignature>
+</eRtl>
+
+
+
+
+--------------------------------05. DEVICE API SERVICES-----------------------
+
+REQUEST TYPE: ASYNCHRONOUS(QUEUE)
+
+REQUEST HEADERS:
+
+Content-Type: application/xml
+SpRefNum: C000003EM
+SetupReqId: ADBBD788ACC1F1D0FD0B8A1C0C9F121A861B5293D550293A23A5E038C627F528
+Vrs: 1.0
+SpSysId: ADVATECHT001
+SetupTyp: SET005
+----
+
+RESPONSE HEADERS:
+SetupTyp: SET005
+
+
+METHOD : POST 
+
+URL: http://137.184.53.63:7980/api/settings-notification/manage-system-setup
+
+
+REQUEST BODY:
+
+<eRtl>
+    <SetupInfReq>
+        <SetHd>
+            <SpRefNum>C000003EM</SpRefNum>
+            <SetupReqId>63E0323A9E49098386C28DBC19FE1C7F3154B02EECED302180FE16EBD97CD657</SetupReqId>
+            <SpSysId>ADVATECHT001</SpSysId>
+            <SetupTyp>SET005</SetupTyp>
+            <SetClBckUrl>http://137.184.53.63/advatech-vfd-service/api/setting/incoming-system-setup-response</SetClBckUrl>
+            <DevId>81109917352F7785B2BAD7769933D6849BCEC9395633546409AEFAA752AA7488</DevId>
+            <SetupRespFlag>true</SetupRespFlag>
+            <Vrs>1.0</Vrs>
+        </SetHd>
+        <SetupDtl>
+            <SubSpRefNum>U0003H</SubSpRefNum>
+            <RtlCentCode>A00001</RtlCentCode>
+            <DevCode></DevCode>
+            <DevMdlCode>BLUETOOTH-DATECH</DevMdlCode>
+            <DevId>09VFDWEBAPI-10131758710927293010TZ100805</DevId>
+            <DevId1>c1041c324bd0f035</DevId1>
+            <DevId2></DevId2>
+            <DevId3></DevId3>
+            <SlLmt>100</SlLmt>
+            <GenBy>e-retail.admin</GenBy>
+            <GenDt>2023-08-02T15:49:13</GenDt>
+            <ApvdBy>e-retail.admin</ApvdBy>
+            <ApvdDt>2023-08-02T15:49:13</ApvdDt>
+            <StsCode>10001</StsCode>
+        </SetupDtl>
+    </SetupInfReq>
+    <eRtlSignature>jsQidgsRMGVIb/oePJJFxUsQioFkv8Lzba4Ouikil/kEE3BRyoX0PXHVV690Du+EcyeeZXnXUgqRzxB5nd0GvYGzrEddsYk7dVnfVQmB4enf0ODeujggzN1vdeWNBhBhwAuqFEO1iLtvCSSREwnh9O+jnJnhIDrJjOBOK19V/zclq9MK1TuJOQyC06W0Y691GOCTm5bTrRLYqPH4dqIu5rsc+Wr8Th8Ja++tVdtlxJUoDUZy7TAOps8I25tBMG0KD+77BlSoq6pEL2iuEuvya/AyMETdqhzaLavmnLxrr/csvuGimTZp8opPUQW8dG1a3cgqTxIOhSAInhrfebSVJg==</eRtlSignature>
+</eRtl>
+
+
+REQUEST ACKNOWLEDGEMENT BODY:
+
+<eRtl>
+    <SetupInfReqAck>
+        <SetupAckId>85B28CE4FBA587F7F0BF595AB180243954941004ADFCA41326611FBDCA25CA3B</SetupAckId>
+        <SetupReqId>63E0323A9E49098386C28DBC19FE1C7F3154B02EECED302180FE16EBD97CD657</SetupReqId>
+        <StsCode>10007</StsCode>
+        <StsDesc>Successful</StsDesc>
+    </SetupInfReqAck>
+    <eRtlSignature>ffb8cd5790af6757d22b923d961c97ed93fea660258cdb3cea1985cb5736955a</eRtlSignature>
+</eRtl>
+
+
+FINAL RESPONSE BODY:
+
+<eRtl>
+    <SetupInfResp>
+        <SetupRespId>85B28CE4FBA587F7F0BF595AB180243954941004ADFCA41326611FBDCA25CA3B</SetupRespId>
+        <SetupReqId>63E0323A9E49098386C28DBC19FE1C7F3154B02EECED302180FE16EBD97CD657</SetupReqId>
+        <SetupTyp>SET005</SetupTyp>
+        <DevCode>D0024</DevCode>
+        <Vrs>1.0</Vrs>
+        <StsCode>10007</StsCode>
+        <StsDesc>Successful</StsDesc>
+    </SetupInfResp>
+    <eRtlSignature>ffb8cd5790af6757d22b923d961c97ed93fea660258cdb3cea1985cb5736955a</eRtlSignature>
+</eRtl>
+
+
+RESPONSE ACKNOWLEDGEMENT BODY:
+
+<eRtl>
+    <SetupInfRespAck>
+        <SetupRespId>85B28CE4FBA587F7F0BF595AB180243954941004ADFCA41326611FBDCA25CA3B</SetupRespId>
+        <SetupReqId>63E0323A9E49098386C28DBC19FE1C7F3154B02EECED302180FE16EBD97CD657</SetupReqId>
+        <StsCode>10007</StsCode>
+        <StsDesc>Successful</StsDesc>
+    </SetupInfRespAck>
+    <eRtlSignature>ffb8cd5790af6757d22b923d961c97ed93fea660258cdb3cea1985cb5736955a</eRtlSignature>
+</eRtl>
+
+
+---------------------------------------------06. SALE API SERVICES-----------------------
+
+REQUEST TYPE: ASYNCHRONOUS(QUEUE)
+
+
+REQUEST HEADERS:
+
+Content-Type: application/xml
+SpRefNum: C000003EM
+SlReqId: E71437AB67F378A826255917C6B55D01212B97157625237AFD74D53B0B31310E
+Vrs: 1.0
+SpSysId: ADVATECHT001
+DevId: 09VFDWEBAPI-10131758710927293010TZ100805
+
+------------------------------
+
+METHOD : POST 
+URL:     http://137.184.53.63:7980/api/sale-purchase/manage-sale
+
+
+REQUEST BODY:
+
+<eRtl>
+    <SaleReq>
+        <SaleHd>
+            <SpRefNum>C000003EM</SpRefNum>
+            <SlReqId>E71437AB67F378A826255917C6B55D01212B97157625237AFD74D53B0B31310E</SlReqId>
+            <SpSysId>ADVATECHT001</SpSysId>
+            <SlClBckUrl>202307251638361700006</SlClBckUrl>
+            <PymtClBckUrl>202307251638361710007</PymtClBckUrl>
+            <ZRClBckUrl>202307251638361720008</ZRClBckUrl>
+            <DevId>09VFDWEBAPI-10131758710927293010TZ100805</DevId>
+            <SlBulkFlag>false</SlBulkFlag>
+            <SlRespFlag>false</SlRespFlag>
+            <Vrs>1.0</Vrs>
+        </SaleHd>
+        <SaleDtl>
+            <SlId>11-C000003EMA00001D00241505</SlId>
+            <SlTxIdNum>109272930</SlTxIdNum>
+            <SubSpRefNum>U0003H</SubSpRefNum>
+            <RtlCentCode>A00001</RtlCentCode>
+            <SpSysId>ADVATECHT001</SpSysId>
+            <BillAmt>1700.00</BillAmt>
+            <BillEqvAmt>1700.00</BillEqvAmt>
+            <SlAmt>1700.00</SlAmt>
+            <SlEqvAmt>1700.00</SlEqvAmt>
+            <SlTxAmt>0.00</SlTxAmt>
+            <SlTxEqvAmt>0.00</SlTxEqvAmt>
+            <SlDiscAmt>0.00</SlDiscAmt>
+            <SlDiscEqvAmt>0.00</SlDiscEqvAmt>
+            <SlCstAmt>1500.00</SlCstAmt>
+            <SlCstEqvAmt>1500.00</SlCstEqvAmt>
+            <SlPftAmt>200.00</SlPftAmt>
+            <SlPftEqvAmt>200.00</SlPftEqvAmt>
+            <SlRtAmt>1.0</SlRtAmt>
+            <SlQty>1</SlQty>
+            <SlItmNum>1.00</SlItmNum>
+            <SlDt>2023-07-25T16:38:35</SlDt>
+            <IdTyp>1</IdTyp>
+            <CustomId>163664356</CustomId>
+            <CustomNm>BESACA CAR RENTAL</CustomNm>
+            <CustomEmail></CustomEmail>
+            <CustomPhNum>0754341420</CustomPhNum>
+            <CustomVrn></CustomVrn>
+            <SlDevId>09VFDWEBAPI-10131758710927293010TZ100805</SlDevId>
+            <SlDevNum>C000003EMA00001D0024</SlDevNum>
+            <SlDesc>device.e-retail</SlDesc>
+            <SlGenDt>2023-07-25T16:38:35</SlGenDt>
+            <SlGenBy>jumaa.mchonga</SlGenBy>
+            <SlApvdDt>2023-07-25T16:38:35</SlApvdDt>
+            <SlApvdBy>jumaa.mchonga</SlApvdBy>
+            <Ccy>TZS</Ccy>
+            <SlPmTyp>CASH</SlPmTyp>
+            <DlyCt>2</DlyCt>
+            <GlCt>1505</GlCt>
+            <ZNum>20230725</ZNum>
+            <RctNum>1505</RctNum>
+            <RctVrfNum>6BF20C1505</RctVrfNum>
+            <EfdSNum>10TZ100805</EfdSNum>
+            <SlRefNum>C000003EMA00001D00241505</SlRefNum>
+            <SlBulkRefNum>902BCF326CBC199CA1DA33660EE874B6334C372E7164504B72373A1D9F485900</SlBulkRefNum>
+            <SaleItm>
+                <SlItmCode>EC000003EMD002353BA84A72000010</SlItmCode>
+                <SlItmNm>Item B</SlItmNm>
+                <SlItmTxCode>2;B;0%</SlItmTxCode>
+                <BillItmAmt>1700.00</BillItmAmt>
+                <BillItmEqvAmt>1700.00</BillItmEqvAmt>
+                <SlItmAmt>1700.00</SlItmAmt>
+                <SlItmEqvAmt>1700.00</SlItmEqvAmt>
+                <SlItmTxAmt>0.00</SlItmTxAmt>
+                <SlItmTxEqvAmt>0.00</SlItmTxEqvAmt>
+                <SlItmDiscAmt>0.00</SlItmDiscAmt>
+                <SlItmDiscEqvAmt>0.00</SlItmDiscEqvAmt>
+                <SlItmCstAmt>1500.00</SlItmCstAmt>
+                <SlItmCstEqvAmt>1500.00</SlItmCstEqvAmt>
+                <SlItmPftAmt>200.00</SlItmPftAmt>
+                <SlItmPftEqvAmt>200.00</SlItmPftEqvAmt>
+                <SlItmQty>1.00</SlItmQty>
+            </SaleItm>
+        </SaleDtl>
+    </SaleReq>
+    <eRtlSignature>342f23c589ba5cf2553b25e18e7882a275a46b488473ec023b754c2fb7466892</eRtlSignature>
+</eRtl>
+
+
+REQUEST ACKNOWLEDGEMENT BODY:
+
+
+<eRtl>
+<SaleReqAck>
+    <SlAckId>18CC6990AD0092D844653E9936C9B0C3497AF63CD1A17FB7C8D46D02A7B97E65</SlAckId>
+    <SlReqId>E71437AB67F378A826255917C6B55D01212B97157625237AFD74D53B0B31310E</SlReqId>
+    <StsCode>10007</StsCode>
+    <StsDesc>Successful</StsDesc>
+</SaleReqAck>
+<eRtlSignature>342f23c589ba5cf2553b25e18e7882a275a46b488473ec023b754c2fb7466892</eRtlSignature>
+</eRtl>
+
+FINAL RESPONSE BODY:
+
+<eRtl>
+    <SaleResp>
+        <SlRespId>18CC6990AD0092D844653E9936C9B0C3497AF63CD1A17FB7C8D46D02A7B97E65</SlRespId>
+        <SlReqId>E71437AB67F378A826255917C6B55D01212B97157625237AFD74D53B0B31310E</SlReqId>
+        <SlId>11-C000003EMA00001D00241505</SlId>
+        <SlRefNum>C000003EMA00001D00241505</SlRefNum>
+        <Vrs>1.0</Vrs>
+        <StsCode>10007</StsCode>
+        <StsDesc>Successful</StsDesc>
+    </SaleResp>
+    <eRtlSignature>342f23c589ba5cf2553b25e18e7882a275a46b488473ec023b754c2fb7466892</eRtlSignature>
+</eRtl>
+
+
+RESPONSE ACKNOWLEDGEMENT BODY:
+
+<eRtl>
+    <SaleRespAck>
+        <SlRespId>18CC6990AD0092D844653E9936C9B0C3497AF63CD1A17FB7C8D46D02A7B97E65</SlRespId>
+        <SlReqId>E71437AB67F378A826255917C6B55D01212B97157625237AFD74D53B0B31310E</SlReqId>
+        <StsCode>10007</StsCode>
+        <StsDesc>Successful</StsDesc>
+    </SaleRespAck>
+    <eRtlSignature>342f23c589ba5cf2553b25e18e7882a275a46b488473ec023b754c2fb7466892</eRtlSignature>
+</eRtl>
+
+
+----------------------------------------------------07. ZREPORT API SERVICES-----------------------------------
+REQUEST TYPE: SYNCHRONOUS(STRAIGHT)
+
+
+REQUEST HEADERS:
+
+Content-Type: application/xml
+SpRefNum: C000003EM
+ZRepReqId: ADBBD788ACC1F1D0FD0B8A1C0C9F121A861B5293D550293A23A5E038C627F528
+Vrs: 1.0
+SpSysId: ADVATECHT001
+----------------
+
+METHOD : POST 
+URL:     http://137.184.53.63:7980/api/sale-purchase/sync/manage-zreport
+
+--------------
+
+
+REQUEST BODY:
+
+<eRtl>
+    <ZRepReq>
+        <ZRepDtl>
+            <ZRepReqId>E490361003C51B2F6B28628C8E805D42643E650143A676E84A5F44D9B6661696</ZRepReqId>
+            <SpRefNum>C000003EM</SpRefNum>
+            <SubSpRefNum>U0010H</SubSpRefNum>
+            <RtlCentCode>A00001</RtlCentCode>
+            <SpSysId>ADVATECHT001</SpSysId>
+            <TxIdNum>102262190</TxIdNum>
+            <ZNum>20230726</ZNum>
+            <EfdSNum>10TZ100811</EfdSNum>
+            <BillEqvAmt>0.00</BillEqvAmt>
+            <DevId>09VFDWEBAPI-10131758710226219010TZ100811</DevId>
+            <GenDt>2023-07-26T23:59:59</GenDt>
+            <GenBy>chuma.manyama</GenBy>
+            <ApvdDt>2023-07-26T23:59:59</ApvdDt>
+            <ApvdBy>chuma.manyama</ApvdBy>
+        </ZRepDtl>
+    </ZRepReq>
+    <eRtlSignature>ffb8cd5790af6757d22b923d961c97ed93fea660258cdb3cea1985cb5736955a</eRtlSignature>
+</eRtl>
+
+
+FINAL RESPONSE:
+
+<eRtl>
+    <ZRepReqAck>
+        <ZRepAckId>21AB9CDE7F1218877E1E0304DB19F7A330C64099E36A65C7CDE4B272B101A099</ZRepAckId>
+        <ZRepReqId>E490361003C51B2F6B28628C8E805D42643E650143A676E84A5F44D9B6661696</ZRepReqId>
+        <StsCode>10007</StsCode>
+        <StsDesc>Successful</StsDesc>
+    </ZRepReqAck>
+    <eRtlSignature>ffb8cd5790af6757d22b923d961c97ed93fea660258cdb3cea1985cb5736955a</eRtlSignature>
+</eRtl>
+
+
+--------------------------------------------------------INFO---------------------------------------------------------
+
+TAXPAYER TEST PARAMETERS FOR INTEGRATION
+
+-----------------------------
+
+SYSTEM ID
+ADVATECHT001
+
+-----------------------------
+TAXPAYER REFERENCE NUMBER
+C000003EM
+
+-----------------------------
+
+EFD SERIAL NUMBER
+10TZ100806
+
+
+
+-----------------------------
+
+TAXPAYER PUBLIC CERTIFICATE (PROVIDED BY  TAXPAYER )
+SUPPLIER SERVICE PUBLIC CERTIFICATE (PROVIDED BY  VFD/EFD SUPPLIER )
+
+-----------------------------
+
+NOTE: AN ASYNCHRONOUS REQUEST USES CALLBACK URL
+      MAKE SURE SYSTEM CALL BACK URL IS AVAILABLE ALL THE TIME
+      
+      
+-----------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,202 @@
+<?xml version="1.0"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="eRtl">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SetupInfReq">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="SetHd">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="SpRefNum" type="SpRefNumString"/>
+                                        <xs:element name="SetupReqId" type="xs:string"/>
+                                        <xs:element name="SpSysId" type="xs:string"/>
+                                        <xs:element name="SetupTyp" type="SetupTypString"/>
+                                        <xs:element name="SetClBckUrl" type="xs:string"/>
+                                        <xs:element name="DevId" type="xs:string"/>
+                                        <xs:element name="Vrs" type="VrsString"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="SetupDtl" maxOccurs="unbounded" minOccurs="1">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element maxOccurs="unbounded" name="SpDtl">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="SpRefNum" type="xs:string"/>
+                                                    <xs:element name="SpNm" type="xs:string"/>
+                                                    <xs:element name="SpDesc" type="xs:string"/>
+                                                    <xs:element name="TxIdNum" type="xs:string"/>
+                                                    <xs:element name="RgnCode" type="xs:unsignedShort"/>
+                                                    <xs:element name="GenDt" type="xs:dateTime"/>
+                                                    <xs:element name="GenBy" type="xs:string"/>
+                                                    <xs:element name="ApvdBy" type="xs:string"/>
+                                                    <xs:element name="StsCode" type="StsCodeString"/>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element maxOccurs="unbounded" name="SubSpDtl">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="SubSpRefNum" type="SubSpRefNumString"/>
+                                                    <xs:element name="SubSpNm" type="xs:string"/>
+                                                    <xs:element name="SubSpDesc" type="xs:string"/>
+                                                    <xs:element name="VatRt" type="xs:string"/>
+                                                    <xs:element name="SpRefNum" type="SpRefNumString"/>
+                                                    <xs:element name="GenDt" type="xs:dateTime"/>
+                                                    <xs:element name="GenBy" type="xs:string"/>
+                                                    <xs:element name="ApvdBy" type="xs:string"/>
+                                                    <xs:element name="SvcFlag" type="xs:boolean"/>
+                                                    <xs:element name="SvcVrs" type="xs:decimal"/>
+                                                    <xs:element name="NegInvFlag" type="NegInvFlagString"/>
+                                                    <xs:element name="StsCode" type="StsCodeString"/>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element maxOccurs="unbounded" name="RtlDtl">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="SpRefNum" type="xs:string"/>
+                                                    <xs:element name="SubSpRefNum" type="xs:string"/>
+                                                    <xs:element name="RtlCentDesc" type="xs:string"/>
+                                                    <xs:element name="RtlCentCode" type="RtlCentCodeString"/>
+                                                    <xs:element name="DistCode" type="xs:unsignedShort"/>
+                                                    <xs:element name="GenDt" type="xs:dateTime"/>
+                                                    <xs:element name="GenBy" type="xs:string"/>
+                                                    <xs:element name="ApvdBy" type="xs:string"/>
+                                                    <xs:element name="ApvdDt" type="xs:dateTime"/>
+                                                    <xs:element name="StsCode" type="StsCodeString"/>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element maxOccurs="unbounded" name="XRDtl">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="SpRefNum" type="SpRefNumString"/>
+                                                    <xs:element name="SubSpRefNum" type="SubSpRefNumString"/>
+                                                    <xs:element name="Ccy" type="xs:string"/>
+                                                    <xs:element name="XRAmt" type="xs:unsignedByte"/>
+                                                    <xs:element name="ReqId" type="xs:unsignedByte"/>
+                                                    <xs:element name="XRDt" type="xs:date"/>
+                                                    <xs:element name="GenDt" type="xs:dateTime"/>
+                                                    <xs:element name="GenBy" type="xs:string"/>
+                                                    <xs:element name="ApvdBy" type="xs:string"/>
+                                                    <xs:element name="StsCode" type="StsCodeString"/>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element maxOccurs="unbounded" name="UsrDtl">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="SpNm" type="xs:string"/>
+                                                    <xs:element name="SubSpName" type="xs:string"/>
+                                                    <xs:element name="SubSpRefNum" type="SubSpRefNumString"/>
+                                                    <xs:element name="RtlCentDesc" type="xs:string"/>
+                                                    <xs:element name="RtlCentCode" type="xs:string"/>
+                                                    <xs:element name="RgnCode" type="xs:dateTime"/>
+                                                    <xs:element name="AccExp" type="xs:boolean"/>
+                                                    <xs:element name="AccLock" type="xs:boolean"/>
+                                                    <xs:element name="AccEn" type="xs:boolean"/>
+                                                    <xs:element name="CredExp" type="xs:boolean"/>
+                                                    <xs:element name="SpAdmin" type="xs:boolean"/>
+                                                    <xs:element name="PsswdExpryDt" type="xs:dateTime"/>
+                                                    <xs:element name="Psswd"/>
+                                                    <xs:element name="FNm" type="xs:string"/>
+                                                    <xs:element name="LNm" type="xs:string"/>
+                                                    <xs:element name="MNm" type="xs:string"/>
+                                                    <xs:element name="PhNum" type="xs:string"/>
+                                                    <xs:element name="PhNum1" type="xs:string"/>
+                                                    <xs:element name="Email" type="xs:string"/>
+                                                    <xs:element name="UsrNm" type="xs:string"/>
+                                                    <xs:element name="Addrs" type="xs:string"/>
+                                                    <xs:element name="RoleNm" type="RoleNmString"/>
+                                                    <xs:element name="GenDt" type="xs:dateTime"/>
+                                                    <xs:element name="GenBy" type="xs:string"/>
+                                                    <xs:element name="ApvdBy" type="xs:string"/>
+                                                    <xs:element name="ApvdDt" type="xs:dateTime"/>
+                                                    <xs:element name="StsCode" type="StsCodeString"/>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element maxOccurs="unbounded" name="DevDtl">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="SubSpRefNum" type="SubSpRefNumString"/>
+                                                    <xs:element name="RtlCentCode" type="RtlCentCodeString"/>
+                                                    <xs:element name="DevCode" type="xs:string"/>
+                                                    <xs:element name="DevId" type="xs:unsignedLong"/>
+                                                    <xs:element name="DevId1" type="xs:unsignedLong"/>
+                                                    <xs:element name="DevId2" type="xs:unsignedLong"/>
+                                                    <xs:element name="DevId3" type="xs:unsignedLong"/>
+                                                    <xs:element name="SlLmt" type="xs:unsignedByte"/>
+                                                    <xs:element name="GenBy" type="xs:string"/>
+                                                    <xs:element name="GenDt" type="xs:dateTime"/>
+                                                    <xs:element name="ApvdBy" type="xs:string"/>
+                                                    <xs:element name="ApvdDt" type="xs:dateTime"/>
+                                                    <xs:element name="StsCode" type="StsCodeString"/>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="eRtlSignature" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:simpleType name="SpRefNumString">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="7"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="SubSpRefNumString">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="7"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="RtlCentCodeString">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="8"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="NegInvFlagString">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="false"/>
+            <xs:enumeration value="true"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="VrsString">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="1.1"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="SetupTypString">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="SET001;SET002;SET003;SET004;SET005"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="SetupRespFlagString">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="false"/>
+            <xs:enumeration value="true"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="RoleNmString">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+            <xs:pattern value="[A-Z_]+"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="StsCodeString">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="5"/>
+            <xs:pattern value="[0-9]{5}"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

@@ -1,0 +1,117 @@
+[
+  {
+    "minAmnt": 0,
+    "maxAmnt": 999,
+    "feeAmnt": 15
+  },
+  {
+    "minAmnt": 1000,
+    "maxAmnt": 1999,
+    "feeAmnt": 30
+  },
+  {
+    "minAmnt": 2000,
+    "maxAmnt": 2999,
+    "feeAmnt": 30
+  },
+  {
+    "minAmnt": 3000,
+    "maxAmnt": 3999,
+    "feeAmnt": 50
+  },
+  {
+    "minAmnt": 4000,
+    "maxAmnt": 4999,
+    "feeAmnt": 60
+  },
+  {
+    "minAmnt": 5000,
+    "maxAmnt": 6999,
+    "feeAmnt": 130
+  },
+  {
+    "minAmnt": 7000,
+    "maxAmnt": 9999,
+    "feeAmnt": 150
+  },
+  {
+    "minAmnt": 10000,
+    "maxAmnt": 14999,
+    "feeAmnt": 350
+  },
+  {
+    "minAmnt": 15000,
+    "maxAmnt": 19999,
+    "feeAmnt": 360
+  },
+  {
+    "minAmnt": 20000,
+    "maxAmnt": 29999,
+    "feeAmnt": 380
+  },
+  {
+    "minAmnt": 30000,
+    "maxAmnt": 39999,
+    "feeAmnt": 400
+  },
+  {
+    "minAmnt": 40000,
+    "maxAmnt": 49999,
+    "feeAmnt": 410
+  },
+  {
+    "minAmnt": 50000,
+    "maxAmnt": 99999,
+    "feeAmnt": 720
+  },
+  {
+    "minAmnt": 100000,
+    "maxAmnt": 199999,
+    "feeAmnt": 1000
+  },
+  {
+    "minAmnt": 200000,
+    "maxAmnt": 299999,
+    "feeAmnt": 1200
+  },
+  {
+    "minAmnt": 300000,
+    "maxAmnt": 399999,
+    "feeAmnt": 1500
+  },
+  {
+    "minAmnt": 400000,
+    "maxAmnt": 499999,
+    "feeAmnt": 1500
+  },
+  {
+    "minAmnt": 500000,
+    "maxAmnt": 599999,
+    "feeAmnt": 5500
+  },
+  {
+    "minAmnt": 600000,
+    "maxAmnt": 699999,
+    "feeAmnt": 2200
+  },
+  {
+    "minAmnt": 700000,
+    "maxAmnt": 799999,
+    "feeAmnt": 3300
+  },
+  {
+    "minAmnt": 800000,
+    "maxAmnt": 899999,
+    "feeAmnt": 3300
+  },
+  {
+    "minAmnt": 900000,
+    "maxAmnt": 1000000,
+    "feeAmnt": 3500
+  },
+  {
+    "minAmnt": 1000001,
+    "maxAmnt": 3000000,
+    "feeAmnt": 5000
+  }
+]

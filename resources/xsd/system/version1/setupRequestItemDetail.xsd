@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="eRtl">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SetupInfReq">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="SetHd">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="SpRefNum" type="SpRefNumString"/>
+                                        <xs:element name="SetupReqId" type="SetupReqIdString"/>
+                                        <xs:element name="SpSysId" type="SpSysIdString"/>
+                                        <xs:element name="SetupTyp" type="SetupTypString"/>
+                                        <xs:element name="SetClBckUrl" type="SetClBckUrlString"/>
+                                        <xs:element name="DevId" type="DevIdString"/>
+                                        <xs:element name="SetupRespFlag" type="SetupRespFlagString"/>
+                                        <xs:element name="Vrs" type="VrsString"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="SetupDtl" maxOccurs="unbounded" minOccurs="1">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="ItmCode" type="ItmCodeString"/>
+                                        <xs:element name="ItmBrCode" type="ItmBrCodeString"/>
+                                        <xs:element name="ItmNm" type="ItmNmString"/>
+                                        <xs:element name="ItmDesc" type="ItmDescString"/>
+                                        <xs:element name="ItmQty" type="ItmQtyDecimal"/>
+                                        <xs:element name="DfltQty" type="DfltQtyDecimal"/>
+                                        <xs:element name="ItmQtyDesc" type="ItmQtyDescString"/>
+                                        <xs:element name="ItmAmt" type="ItmAmtDecimal"/>
+                                        <xs:element name="ItmCstAmt" type="ItmCstAmtDecimal"/>
+                                        <xs:element name="ItmPftAmt" type="ItmPftAmtDecimal"/>
+                                        <xs:element name="ItmPctPft" type="ItmPctPftDecimal"/>
+                                        <xs:element name="ItmTxCode" type="ItmTxCodeString"/>
+                                        <xs:element name="MstUnit" type="MstUnitString"/>
+                                        <xs:element name="SubSpRefNum" type="SubSpRefNumString"/>
+                                        <xs:element name="RtlCentCode" type="RtlCentCodeString"/>
+                                        <xs:element name="ItmTrfFlag" type="ItmTrfFlagString"/>
+                                        <xs:element name="FxItmAmtFlag" type="FxItmAmtFlagString"/>
+                                        <xs:element name="NegInvFlag" type="NegInvFlagString"/>
+                                        <xs:element name="InvCtrlFlag" type="InvCtrlFlagString"/>
+                                        <xs:element name="InvRstFlag" minOccurs="0" type="InvRstFlagString"/>
+                                        <xs:element name="GenBy" type="GenByString"/>
+                                        <xs:element name="GenDt" type="GenDtDateTime"/>
+                                        <xs:element name="ApvdBy" type="ApvdByString"/>
+                                        <xs:element name="ApvdDt" type="ApvdDtDateTime"/>
+                                        <xs:element name="StsCode" type="StsCodeString"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="eRtlSignature" type="eRtlSignatureString"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+
+    <!--=================Start Header Xds Validation=================-->
+    <xs:simpleType name="SpRefNumString">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="9"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="SetupReqIdString">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="SpSysIdString">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="SetupTypString">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="SET022"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="SetClBckUrlString">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="DevIdString">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="SetupRespFlagString">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="false"/>
+            <xs:enumeration value="true"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="VrsString">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="1.0"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!--=================End Header Xsd Validation=================-->
+    <!--=================Start Message Payload Xsd Validation======-->
+
+    <xs:simpleType name="ItmCodeString">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="30"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="ItmBrCodeString">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="([a-zA-Z0-9 _\\:.+=\-^,^;?|*\[\]{}()@/#$%^'~`&amp;&quot;&apos;&lt;&gt;\n\r]*)"/>
+            <xs:maxLength value="100"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="ItmNmString">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="500"/>
+            <xs:pattern value="([a-zA-Z0-9 _\\:.+=\-^,^;?|*\[\]{}()@/#$%^'~`&amp;&quot;&apos;&lt;&gt;\n\r]*)"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="ItmDescString">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="500"/>
+            <xs:pattern value="([a-zA-Z0-9 _\\:.+=\-^,^;?|*\[\]{}()@/#$%^'~`&amp;&quot;&apos;&lt;&gt;\n\r]*)"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="ItmQtyDecimal">
+        <xs:restriction base="xs:decimal">
+            <xs:totalDigits value="38"/>
+            <xs:fractionDigits value="2"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="DfltQtyDecimal">
+        <xs:restriction base="xs:decimal">
+            <xs:minExclusive value="0"/>
+            <xs:totalDigits value="38"/>
+            <xs:fractionDigits value="2"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="ItmQtyDescString">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="500"/>
+            <xs:pattern value="([a-zA-Z0-9 _\\:.+=\-^,^;?|*\[\]{}()@/#$%^'~`&amp;&quot;&apos;&lt;&gt;\n\r]*)"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="ItmAmtDecimal">
+        <xs:restriction base="xs:decimal">
+            <xs:minExclusive value="0"/>
+            <xs:totalDigits value="38"/>
+            <xs:fractionDigits value="2"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="ItmCstAmtDecimal">
+        <xs:restriction base="xs:decimal">
+            <xs:totalDigits value="38"/>
+            <xs:fractionDigits value="2"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="ItmPftAmtDecimal">
+        <xs:restriction base="xs:decimal">
+            <xs:totalDigits value="38"/>
+            <xs:fractionDigits value="2"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="ItmPctPftDecimal">
+        <xs:restriction base="xs:decimal">
+            <xs:totalDigits value="38"/>
+            <xs:fractionDigits value="2"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="ItmTxCodeString">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="MstUnitString">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="SubSpRefNumString">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="6"/>
+            <xs:maxLength value="6"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="RtlCentCodeString">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="6"/>
+            <xs:maxLength value="6"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="ItmTrfFlagString">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="false"/>
+            <xs:enumeration value="true"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="FxItmAmtFlagString">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="false"/>
+            <xs:enumeration value="true"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="NegInvFlagString">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="false"/>
+            <xs:enumeration value="true"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="InvCtrlFlagString">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="false"/>
+            <xs:enumeration value="true"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="InvRstFlagString">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="false"/>
+            <xs:enumeration value="true"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="GenDtDateTime">
+        <xs:restriction base="xs:dateTime">
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="GenByString">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="([a-zA-Z0-9 _\\:.+=\-^,^;?|*\[\]{}()@/#$%^'~`&amp;&quot;&apos;&lt;&gt;\n\r]*)"/>
+            <xs:minLength value="1"/>
+            <xs:maxLength value="100"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="ApvdByString">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="([a-zA-Z0-9 _\\:.+=\-^,^;?|*\[\]{}()@/#$%^'~`&amp;&quot;&apos;&lt;&gt;\n\r]*)"/>
+            <xs:minLength value="1"/>
+            <xs:maxLength value="100"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="ApvdDtDateTime">
+        <xs:restriction base="xs:dateTime">
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="StsCodeString">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="5"/>
+            <xs:pattern value="[0-9]{5}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="eRtlSignatureString">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <!--=================End Message Payload Xsd Validation======-->
+
+</xs:schema>
